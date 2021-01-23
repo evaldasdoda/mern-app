@@ -1,13 +1,13 @@
 import React, {useState} from "react";
-import {MainHeader} from "./MainHeader";
+import MainHeader from "./MainHeader";
 import {Link} from "react-router-dom";
-import {NavLinks} from "./NavLinks";
-import {SideDrawer} from "./SideDrawer";
+import NavLinks from "./NavLinks";
+import SideDrawer from "./SideDrawer";
 import Backdrop from "../UIElements/Backdrop";
 
 import './MainNavigation.css';
 
-export const MainNavigation = () => {
+const MainNavigation = () => {
     const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
     const openDrawerHandler = () => {
@@ -35,7 +35,7 @@ export const MainNavigation = () => {
                     <span/>
                 </button>
                 <h1 className='main-navigation__title'>
-                    <Link>
+                    <Link to='/'>
                         YourPlaces
                     </Link>
                 </h1>
@@ -46,3 +46,5 @@ export const MainNavigation = () => {
         </>
     )
 }
+
+export default MainNavigation;
